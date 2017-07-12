@@ -1,0 +1,54 @@
+#!/usr/bin/env node --harmony
+'use strict'
+// 定义脚手架的文件路径
+process.env.NODE_PATH = __dirname + '/../node_modules/'
+const program = require('commander')
+
+// 定义当前版本
+program
+	.version(require('../package').version )
+
+// 定义使用方法
+program
+	.usage('<command>')
+
+program
+	.command('add')
+	.description('添加一个新项目样板')
+	.alias('a')
+	.action(() => {
+	require('../command/add')()
+})
+
+program
+	.command('list')
+	.description('罗列出所有的项目样板')
+	.alias('l')
+	.action(() => {
+	require('../command/list')()
+})
+
+program
+	.command('init')
+	.description('构建一个新项目样板')
+	.alias('i')
+	.action(() => {
+	require('../command/init')()
+})
+
+program
+	.command('delete')
+	.description('删除一个项目样板')
+	.alias('d')
+	.action(() => {
+	require('../command/delete')()
+})
+
+
+//commander的具体使用方法在这里就不展开了，可以直接到官网去看详细的文档。 https://github.com/tj/commander.js/
+
+program.parse(process.argv)
+
+if(!program.args.length){
+	program.help()
+}

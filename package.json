@@ -1,0 +1,17 @@
+{
+  "name": "mty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "mty": "bin/mty"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0"
+  },
+  "author": "makan",
+  "license": "ISC"
+}
