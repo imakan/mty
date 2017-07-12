@@ -1,7 +1,7 @@
 {
   "name": "mty",
   "version": "1.0.0",
-  "description": "",
+  "description": "构建一个自己的脚手架",
   "main": "index.js",
   "bin": {
     "mty": "bin/mty"
@@ -12,6 +12,17 @@
     "co-prompt": "^1.0.0",
     "commander": "^2.9.0"
   },
+  "bugs": {
+    "url": "https://github.com/imakan/mty/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:imakan/mty.git"
+  },
+  "keywords": [
+    "generator-ima-node",
+    "yeoman-generator"
+  ],
   "author": "makan",
   "license": "ISC"
 }
